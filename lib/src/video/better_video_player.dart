@@ -28,7 +28,7 @@ class _BetterVideoPlayerState extends State<BetterVideoPlayer> {
     );
     _betterPlayerDataSource = BetterPlayerDataSource(
       BetterPlayerDataSourceType.network,
-      'https://www.youtube.com/watch?v=q-hyKpv0Yp4',
+      'https://edisciplinas.usp.br/pluginfile.php/5196097/mod_resource/content/1/Teste.mp4',
     );
     _betterPlayerController = BetterPlayerController(betterPlayerConfiguration);
     _betterPlayerController.setupDataSource(_betterPlayerDataSource);

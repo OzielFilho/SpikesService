@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:spikes_service/src/youtube/better_video_player.dart';
+import 'package:spikes_service/src/video/better_video_player.dart';
+import 'package:spikes_service/src/video/flick_player_video.dart';
+import 'package:spikes_service/src/video/pod_video_player.dart';
+import 'package:spikes_service/src/youtube/webview_ss_player.dart';
 import 'package:spikes_service/src/youtube/youtube_iframe_player.dart';
 import 'package:spikes_service/src/youtube/youtube_player.dart';
 
@@ -44,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // MaterialButton(
             //   color: Theme.of(context).primaryColor,
             //   child: Text(
-            //     'Youtube Player',
+            //     'Youtube Webview Player',
             //     style: Theme.of(context).textTheme.headline2,
             //   ),
             //   onPressed: () => Navigator.push(
@@ -56,27 +59,39 @@ class _MyHomePageState extends State<MyHomePage> {
             MaterialButton(
               color: Theme.of(context).primaryColor,
               child: Text(
-                'Youtube Player',
+                'Flick Player Video',
                 style: Theme.of(context).textTheme.headline2,
               ),
               onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const YoutubePlayerWidget(),
+                    builder: (context) => const FlickPlayerVideo(),
                   )),
             ),
-            MaterialButton(
-              color: Theme.of(context).primaryColor,
-              child: Text(
-                'Youtube Iframe Player',
-                style: Theme.of(context).textTheme.headline2,
-              ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const YoutubeIframePlayer(),
-                  )),
-            ),
+            // MaterialButton(
+            //   color: Theme.of(context).primaryColor,
+            //   child: Text(
+            //     'Youtube Player',
+            //     style: Theme.of(context).textTheme.headline2,
+            //   ),
+            //   onPressed: () => Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) => const YoutubePlayerWidget(),
+            //       )),
+            // ),
+            // MaterialButton(
+            //   color: Theme.of(context).primaryColor,
+            //   child: Text(
+            //     'Youtube Iframe Player',
+            //     style: Theme.of(context).textTheme.headline2,
+            //   ),
+            //   onPressed: () => Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) => const YoutubeIframePlayer(),
+            //       )),
+            // ),
             MaterialButton(
               color: Theme.of(context).primaryColor,
               child: Text(
@@ -92,15 +107,27 @@ class _MyHomePageState extends State<MyHomePage> {
             MaterialButton(
               color: Theme.of(context).primaryColor,
               child: Text(
-                'Vimeo Player',
+                'Pod Player',
                 style: Theme.of(context).textTheme.headline2,
               ),
               onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const YoutubePlayerWidget(),
+                    builder: (context) => const PodVideo(),
                   )),
             ),
+            // MaterialButton(
+            //   color: Theme.of(context).primaryColor,
+            //   child: Text(
+            //     'Vimeo Player',
+            //     style: Theme.of(context).textTheme.headline2,
+            //   ),
+            //   onPressed: () => Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) => const YoutubePlayerWidget(),
+            //       )),
+            // ),
           ],
         ),
       ),
