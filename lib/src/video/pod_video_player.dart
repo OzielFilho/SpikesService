@@ -17,12 +17,10 @@ class _PodVideoState extends State<PodVideo> with WidgetsBindingObserver {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
     controller = PodPlayerController(
-        playVideoFrom: PlayVideoFrom.network(
-            'https://edisciplinas.usp.br/pluginfile.php/5196097/mod_resource/content/1/Teste.mp4'))
-      ..initialise();
-
+      playVideoFrom: PlayVideoFrom.vimeo('162974951'),
+    )..initialise();
     controller.addListener(() {
-      print(controller.videoState);
+      print('EM BACKGROUND');
     });
   }
 
@@ -62,10 +60,6 @@ class _PodVideoState extends State<PodVideo> with WidgetsBindingObserver {
             onLoading: (context) => const Center(
               child: CircularProgressIndicator(),
             ),
-            onVideoError: () {
-              controller.pause();
-              return ErrorWidget('Erro');
-            },
           ),
           if (!(controller.videoState == PodVideoState.error) ||
               !(controller.videoState == PodVideoState.loading))

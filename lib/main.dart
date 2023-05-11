@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spikes_service/src/video/better_video_player.dart';
 import 'package:spikes_service/src/video/flick_player_video.dart';
 import 'package:spikes_service/src/video/pod_video_player.dart';
+import 'package:spikes_service/src/vimeo/vimeo_video_player.dart';
 import 'package:spikes_service/src/youtube/webview_ss_player.dart';
 import 'package:spikes_service/src/youtube/youtube_iframe_player.dart';
 import 'package:spikes_service/src/youtube/youtube_player.dart';
@@ -56,18 +57,18 @@ class _MyHomePageState extends State<MyHomePage> {
             //         builder: (context) => const WebviewSSPlayer(),
             //       )),
             // ),
-            MaterialButton(
-              color: Theme.of(context).primaryColor,
-              child: Text(
-                'Flick Player Video',
-                style: Theme.of(context).textTheme.headline2,
-              ),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const FlickPlayerVideo(),
-                  )),
-            ),
+            // MaterialButton(
+            //   color: Theme.of(context).primaryColor,
+            //   child: Text(
+            //     'Flick Player Video',
+            //     style: Theme.of(context).textTheme.headline2,
+            //   ),
+            //   onPressed: () => Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) => const FlickPlayerVideo(),
+            //       )),
+            // ),
             // MaterialButton(
             //   color: Theme.of(context).primaryColor,
             //   child: Text(
@@ -95,15 +96,27 @@ class _MyHomePageState extends State<MyHomePage> {
             MaterialButton(
               color: Theme.of(context).primaryColor,
               child: Text(
-                'Better Player',
+                'Vimeo Player',
                 style: Theme.of(context).textTheme.headline2,
               ),
               onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const BetterVideoPlayer(),
+                    builder: (context) => const VimeVideoPlayer(),
                   )),
             ),
+            // MaterialButton(
+            //   color: Theme.of(context).primaryColor,
+            //   child: Text(
+            //     'Better Player',
+            //     style: Theme.of(context).textTheme.headline2,
+            //   ),
+            //   onPressed: () => Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) => const BetterVideoPlayer(),
+            //       )),
+            // ),
             MaterialButton(
               color: Theme.of(context).primaryColor,
               child: Text(
